@@ -21,6 +21,26 @@ This extension is designed for **local, trusted setups** and handles its own aud
 
 ---
 
+## What This Extension Does (TL;DR)
+
+This extension allows SillyTavern to interact with your toys and devices by executing commands at the moment (give or take) they occur in the narration.
+
+A starter character is included in the extension files to demonstrate how commands can be naturally embedded into responses. You may use this character as-is, modify it, or use the extension with any character of your choice, as long as the model outputs valid command blocks.
+
+It works best with **short to medium responses (1–4 paragraphs)**, but it is capable of handling very long responses as well. As responses grow longer:
+
+* Command timing will **degrade slightly**, but should remain reasonably close
+* Audio generation and playback will take longer
+* The next narration cannot begin until the current audio and command sequence has completed
+
+Because timing is based on generated audio, this behavior is unavoidable and is influenced by:
+
+* Response length
+* TTS backend performance
+* Hardware capabilities
+
+---
+
 ## Tested Environment
 
 This extension was developed and tested with the following software and versions:
@@ -51,26 +71,6 @@ However:
 * Other capabilities (linear, rotate, scalar) are supported in code but may not have been personally tested
 
 Device capabilities are detected automatically at runtime, and unsupported commands are safely ignored with warnings.
-
----
-
-## What This Extension Does (TL;DR)
-
-This extension allows SillyTavern to interact with your toys and devices by executing commands at the moment (give or take) they occur in the narration.
-
-A starter character is included in the extension files to demonstrate how commands can be naturally embedded into responses. You may use this character as-is, modify it, or use the extension with any character of your choice, as long as the model outputs valid command blocks.
-
-It works best with **short to medium responses (1–4 paragraphs)**, but it is capable of handling very long responses as well. As responses grow longer:
-
-* Command timing will **degrade slightly**, but should remain reasonably close
-* Audio generation and playback will take longer
-* The next narration cannot begin until the current audio and command sequence has completed
-
-Because timing is based on generated audio, this behavior is unavoidable and is influenced by:
-
-* Response length
-* TTS backend performance
-* Hardware capabilities
 
 ---
 
