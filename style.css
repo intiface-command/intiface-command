@@ -1,0 +1,92 @@
+.ic-wide-button {
+    flex: 1;
+    white-space: nowrap;
+}
+
+.ic-btn-yellow {
+    background-color: #EFB700 !important;
+    color: white !important;
+}
+
+.ic-btn-blue {
+    background-color: #3a6df0 !important;
+    color: white !important;
+}
+
+.ic-btn-green {
+    background-color: #2b9e4b !important;
+    color: white !important;
+}
+
+.ic-btn-red {
+    background-color: #c62828 !important;
+    color: white !important;
+}
+
+#ic_alltalk_status.ready {
+    color: #4CAF50 !important;
+    /* green */
+    font-weight: bold;
+}
+
+#ic_alltalk_status.error {
+    color: #FF5252 !important;
+    /* red */
+    font-weight: bold;
+}
+
+#ic_intiface_status.ready {
+    color: #4CAF50 !important;
+    /* green */
+    font-weight: bold;
+}
+
+#ic_intiface_status.error {
+    color: #FF5252 !important;
+    /* red */
+    font-weight: bold;
+}
+
+/* === Intiface Command layout helpers === */
+
+.ic-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ic-label-flex {
+    flex: 1;
+}
+
+.ic-input-wide {
+    flex: 2;
+    min-width: 220px;
+}
+
+.ic-input-sm {
+    width: 70px;
+}
+
+.ic-input-xs {
+    width: 45px;
+}
+
+.ic-input-sm-wide {
+    width: 55px;
+}
+
+.ic-nowrap {
+    white-space: nowrap;
+}
+
+/* Random pattern grouped rows */
+.ic-group-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ic-group-label {
+    min-width: 120px;
+}

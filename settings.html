@@ -1,0 +1,163 @@
+<div class="intiface-command-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>Intiface Command</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+
+        <div class="inline-drawer-content">
+
+            <!-- AllTalk Base URL -->
+            <div class="flex-container ic-row">
+                <label class="ic-label-flex">
+                    AllTalk Base URL
+                </label>
+                <input id="ic_alltalk_base_url" class="text_pole ic-input-wide" type="text" />
+            </div>
+
+            <!-- Voice Model -->
+            <div class="flex-container ic-row">
+                <label class="ic-label-flex">
+                    Voice Model
+                </label>
+
+                <select id="ic_voice_model" class="text_pole ic-input-wide">
+                    <option value="">Loading voices...</option>
+                </select>
+
+                <button id="ic_refresh_voices" class="menu_button ic-btn-blue ic-nowrap">
+                    Refresh
+                </button>
+            </div>
+
+            <datalist id="ic_voice_model_list"></datalist>
+
+            <!-- TTS Chunk Size -->
+            <div class="flex-container ic-row">
+                <label class="ic-label-flex">
+                    TTS Chunk Size (characters per request)
+                </label>
+                <input id="ic_chunk_size" class="text_pole ic-input-sm" type="number" min="1" />
+            </div>
+
+            <!-- Silence Padding -->
+            <div class="flex-container ic-row">
+                <label class="ic-label-flex">
+                    Silence Padding (ms between chunks)
+                </label>
+                <input id="ic_silence_ms" class="text_pole ic-input-sm" type="number" min="0" />
+            </div>
+
+            <!-- Base WPM -->
+            <div class="flex-container ic-row">
+                <label class="ic-label-flex">
+                    Base Speech Speed (words per minute)
+                </label>
+                <input id="ic_base_wpm" class="text_pole ic-input-sm" type="number" min="1" />
+            </div>
+
+            <!-- Playback Speed -->
+            <div class="flex-container">
+                <label>Playback Speed</label>
+
+                <div class="flex-container flex-gap-1">
+                    <input id="ic_playback_speed" type="range" min="0.5" max="2.0" step="0.05" style="flex: 1;" />
+
+                    <input id="ic_playback_speed_value" type="number" min="0.5" max="2.0" step="0.05"
+                        class="text_pole ic-input-sm" />
+                </div>
+            </div>
+
+            <!-- Output Volume -->
+            <div class="flex-container">
+                <label>Output Volume</label>
+
+                <div class="flex-container flex-gap-1">
+                    <input id="ic_output_volume" type="range" min="0" max="1" step="0.01" style="flex: 1;" />
+
+                    <input id="ic_output_volume_value" type="number" min="0" max="1" step="0.01"
+                        class="text_pole ic-input-sm" />
+                </div>
+            </div>
+
+            <!-- Audio Controls -->
+            <div class="flex-container">
+                <label>&nbsp;</label>
+                <button id="ic_pause_audio" class="menu_button ic-wide-button ic-btn-yellow">
+                    Pause Audio
+                </button>
+            </div>
+
+            <div class="flex-container">
+                <label>&nbsp;</label>
+                <button id="ic_resume_audio" class="menu_button ic-wide-button ic-btn-green">
+                    Resume Audio
+                </button>
+            </div>
+
+            <div class="flex-container">
+                <label>&nbsp;</label>
+                <button id="ic_stop_audio" class="menu_button red ic-wide-button ic-btn-red">
+                    STOP Audio + Devices
+                </button>
+            </div>
+
+            <!-- Status -->
+            <div class="flex-container">
+                <label>AllTalk Status</label>
+                <span id="ic_alltalk_status">
+                    Checking...
+                </span>
+            </div>
+
+            <div class="flex-container">
+                <label>Intiface Status</label>
+                <span id="ic_intiface_status" class="status-indicator">
+                    Not Connected
+                </span>
+            </div>
+
+            <hr class="sysHR" />
+
+            <b>Random Pattern Settings</b><br />
+            Syntax: <i>{pattern:custom; values:random;}.</i>
+
+            <!-- Pattern Values -->
+            <div class="flex-container ic-group-row">
+                <label class="ic-group-label">Pattern Values</label>
+
+                <span>Min</span>
+                <input id="ic_rand_min_values" type="number" min="1" class="text_pole ic-input-xs" />
+
+                <span>Max</span>
+                <input id="ic_rand_max_values" type="number" min="1" class="text_pole ic-input-xs" />
+            </div>
+
+            <!-- Duration -->
+            <div class="flex-container ic-group-row">
+                <label class="ic-group-label">Duration (sec)</label>
+
+                <span>Min</span>
+                <input id="ic_rand_min_duration" type="number" min="1" class="text_pole ic-input-xs" />
+
+                <span>Max</span>
+                <input id="ic_rand_max_duration" type="number" min="1" class="text_pole ic-input-xs" />
+            </div>
+
+            <!-- Intensity -->
+            <div class="flex-container ic-group-row">
+                <label class="ic-group-label">Intensity</label>
+
+                <span>Min</span>
+                <input id="ic_rand_min_intensity" type="number" min="0" max="1" step="0.01"
+                    class="text_pole ic-input-sm-wide" />
+
+                <span>Max</span>
+                <input id="ic_rand_max_intensity" type="number" min="0" max="1" step="0.01"
+                    class="text_pole ic-input-sm-wide" />
+            </div>
+
+            <hr class="sysHR" />
+        </div>
+    </div>
+</div>
