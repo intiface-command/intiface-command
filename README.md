@@ -10,17 +10,6 @@ This extension is designed for **local, trusted setups** and handles its own aud
 
 ---
 
-## Important Usage Notes
-
-* **Do not use this extension alongside SillyTavern’s default TTS extension.**
-  Intiface Command generates and plays its own audio and relies on that audio for command timing. Running another TTS system at the same time may result in conflicts or duplicated audio.
-
-* Audio playback and command execution are tightly coupled. Because of this, **audio generation does not begin until the LLM response is fully received**.
-
-* Pause Audio, Resume Audio, and Stop Audio + Device buttons are available in the extension settings menu.
-
----
-
 ## What This Extension Does (TL;DR)
 
 This extension allows SillyTavern to interact with your toys and devices by executing commands at the moment (give or take) they occur in the narration.
@@ -41,11 +30,24 @@ Because timing is based on generated audio, this behavior is unavoidable and is 
 
 ---
 
+## Features
+
+* Inline device control using simple text commands
+* Works with Intiface / Buttplug-compatible devices
+* Automatic device capability detection
+* Pattern and ramp-based motion support
+* Random pattern generation
+* Audio-synced command execution via AllTalk TTS
+* Safe command queueing and interruption handling
+* Manual audio playback controls (pause / resume / stop)
+
+---
+
 ## Tested Environment
 
 This extension was developed and tested with the following software and versions:
 
-* **AllTalk TTS Standalone**
+* **AllTalk TTS v2 Standalone**
 
   * Piper backend used during development
   * Other AllTalk-supported backends should work
@@ -71,19 +73,6 @@ However:
 * Other capabilities (linear, rotate, scalar) are supported in code but may not have been personally tested
 
 Device capabilities are detected automatically at runtime, and unsupported commands are safely ignored with warnings.
-
----
-
-## Features
-
-* Inline device control using simple text commands
-* Works with Intiface / Buttplug-compatible devices
-* Audio-synced command execution via AllTalk TTS
-* Pattern and ramp-based motion support
-* Automatic device capability detection
-* Safe command queueing and interruption handling
-* Random pattern generation
-* Manual audio playback controls (pause / resume / stop)
 
 ---
 
@@ -206,6 +195,17 @@ This is **best-effort synchronization**, not sample-accurate alignment.
 
 ---
 
+## Important Usage Notes
+
+* **Do not use this extension alongside SillyTavern’s default TTS extension.**
+  Intiface Command generates and plays its own audio and relies on that audio for command timing. Running another TTS system at the same time may result in conflicts or duplicated audio.
+
+* Audio playback and command execution are tightly coupled. Because of this, **audio generation does not begin until the LLM response is fully received**.
+
+* * Pause Audio, Resume Audio, and Stop Audio + Device buttons are available in the **Extensions → Intiface Command** settings menu.
+
+---
+
 ## Safety Notes
 
 * This extension assumes trusted, local services
@@ -221,6 +221,36 @@ This is **best-effort synchronization**, not sample-accurate alignment.
 * Timing accuracy degrades slightly with very long responses
 * Only one device is controlled at a time
 * No phoneme-level synchronization
+
+---
+
+## Wishlist / Ideas (Non-Committed)
+
+These are **potential future enhancements** being considered. They may or may not be implemented. Any additions will aim to support the existing inline-command model without expanding the scope beyond its core purpose.
+
+* **Script / Macro Support**
+  - Lightweight, optional macros or scripts to reduce repetition while preserving inline command usage.
+
+* **Command Pattern Library**
+  - Optional JSON-defined pattern presets (e.g., `pulse`, `wave`) that LLMs can reference via simple inline tags.
+
+* **Contextual Command Variables**
+  - Allow placeholders like `{intensity}` to be resolved from language context (e.g., “gently”, “intensely”) instead of hard-coded values.
+
+* **Improved Audio Control Visibility**
+  - Expose audio playback controls more clearly in the main UI instead of only in the Extensions settings.
+
+* **Device Profiles**
+  - Load and switch between user-defined device profiles with different limits or tuning.
+
+* **Optional Audio Masking / Silent Mode**
+  - Execute commands without audible narration for users who want device control only.
+
+* **Analytics / Logging**
+  - Optional command and timing logs to help users refine prompts and patterns.
+
+* **Multi-Device Support**
+  - Allow more than one device to be controlled simultaneously, where supported.
 
 ---
 
