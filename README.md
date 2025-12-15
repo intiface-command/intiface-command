@@ -182,7 +182,7 @@ Values are automatically smoothed into ramps.
 {pattern: custom; values: random}
 ```
 
-Generates a custom pattern with a randomly-selected number of random variables, for a random duration.
+Generates a custom pattern with a randomly-selected number of random variables, for a random duration. The generated command is not shown in the UI but is printed in the browser console for reference.
 
 Minimum and maximum values for random behavior are controlled via the extension settings menu:
 
