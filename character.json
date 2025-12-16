@@ -1,5 +1,5 @@
 {
-    "name": "LLM",
+    "name": "Intiface Command",
     "description": "",
     "personality": "",
     "scenario": "Make decisions about penetration based on emotional or narrative context.  \r\nIf the scene becomes calmer, reduce penetration intensity.  \r\nIf action spikes, increase it. ",
