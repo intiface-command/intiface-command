@@ -78,7 +78,7 @@ Device capabilities are detected automatically at runtime, and unsupported comma
 
 ## Installation
 
-1. Place the extension folder in one of SillyTavern’s extensions directories:
+1. Place the extension folder in SillyTavern’s extensions directory:
 
 ```
 
