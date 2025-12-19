@@ -78,24 +78,35 @@ Device capabilities are detected automatically at runtime, and unsupported comma
 
 ## Installation
 
-1. Place the extension folder in:
+1. Place the extension folder in one of SillyTavern’s extensions directories:
 
-   ```
-   SillyTavern/data/default-user/extensions/intiface-command
-   ```
+```
+
+SillyTavern/data/default-user/extensions/
+
+```
+
+**Example:**
+```
+
+SillyTavern/data/default-user/extensions/intiface-command
+
+```
+
 (Or another valid SillyTavern extensions folder.)
 
 2. Restart SillyTavern.
 
 3. Open **Extensions → Intiface Command** in the settings panel.
 
-4. Ensure:
+4. Ensure the following are running and configured:
 
-   * Intiface Central is running and connected to a device
-   * AllTalk is running
-   * A voice model is selected
+- Intiface Central is running and connected to a device
+- AllTalk is running
+- A voice model is selected
 
-Connection status indicators will show when both services are available.
+Connection status indicators will appear when both services are available.
+
 
 ---
 
